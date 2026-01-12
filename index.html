@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stoyan Angelov | IT Consultant & Strategist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom image styling to ensure the uploaded photo looks good regardless of aspect ratio */
+        .profile-image-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .profile-image-container::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top right, rgba(15, 23, 42, 0.1), transparent);
+            z-index: 10;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a', /* Slate 900 */
+                        accent: '#2563eb',  /* Blue 600 */
+                        secondary: '#64748b', /* Slate 500 */
+                        cream: '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-slate-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="font-bold text-2xl tracking-tight text-primary flex items-center gap-2">
+                    <span class="w-8 h-8 bg-primary text-white rounded-lg flex items-center justify-center font-serif text-lg">S</span>
+                    Stoyan Angelov.
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center text-sm font-semibold tracking-wide">
+                    <a href="#expertise" class="text-gray-600 hover:text-accent transition">Expertise</a>
+                    <a href="#about" class="text-gray-600 hover:text-accent transition">About Me</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-accent transition">Testimonials</a>
+                    <a href="#contact" class="px-6 py-2.5 bg-primary text-white rounded-full hover:bg-slate-800 transition shadow-lg shadow-primary/20">
+                        Let's Talk
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <i data-lucide="menu" class="h-7 w-7"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#expertise" class="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md">Expertise</a>
+                <a href="#about" class="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md">About Me</a>
+                <a href="#testimonials" class="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md">Testimonials</a>
+                <a href="#contact" class="block px-3 py-3 text-base font-medium text-accent font-bold hover:bg-gray-50 rounded-md">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                
+                <!-- Text Content -->
+                <div class="order-2 lg:order-1">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-accent text-xs font-bold uppercase tracking-wider mb-6">
+                        <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                        Available for new projects
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-bold text-primary leading-tight mb-8">
+                        Seamless Migrations to <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Modern Workspaces.</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-10 leading-relaxed max-w-lg">
+                        Hi, I'm Stoyan. I specialize in migrating businesses to Microsoft 365 and Google Workspace with zero data loss and robust security compliance.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                        <a href="#contact" class="px-8 py-4 bg-primary text-white font-bold rounded-lg hover:bg-slate-800 transition shadow-xl shadow-primary/20 flex items-center justify-center gap-2">
+                            Book a Strategy Call
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#expertise" class="px-8 py-4 bg-white border border-gray-200 text-primary font-semibold rounded-lg hover:bg-gray-50 transition flex items-center justify-center">
+                            View My Expertise
+                        </a>
+                    </div>
+
+                    <div class="flex items-center gap-8 text-gray-400">
+                        <a href="#" class="hover:text-primary transition"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                        <a href="#" class="hover:text-primary transition"><i data-lucide="github" class="w-6 h-6"></i></a>
+                        <a href="#" class="hover:text-primary transition"><i data-lucide="twitter" class="w-6 h-6"></i></a>
+                        <div class="h-8 w-px bg-gray-200"></div>
+                        <div class="flex items-center gap-2">
+                            <span class="font-bold text-primary text-xl">10+</span>
+                            <span class="text-xs uppercase font-semibold">Years<br>Exp.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Content -->
+                <div class="order-1 lg:order-2 relative">
+                    <!-- Decor elements -->
+                    <div class="absolute -top-10 -right-10 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-50"></div>
+                    <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-indigo-100 rounded-full blur-3xl opacity-50"></div>
+                    
+                    <!-- Main Image Container -->
+                    <div class="profile-image-container relative rounded-2xl shadow-2xl bg-gray-100 rotate-2 hover:rotate-0 transition duration-500 ease-in-out border-[8px] border-white">
+                        <!-- USER IMAGE HERE -->
+                        <img src="GKT55318.jpg" alt="Stoyan Angelov" class="w-full h-auto object-cover rounded-lg aspect-[4/5] lg:aspect-[3/4]">
+                        
+                        <!-- Floating Badge -->
+                        <div class="absolute bottom-6 left-6 bg-white/95 backdrop-blur shadow-lg p-4 rounded-xl flex items-center gap-3 max-w-xs z-20">
+                            <div class="bg-green-100 p-2 rounded-full text-green-600">
+                                <i data-lucide="shield-check" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 font-semibold uppercase">Certified Expert</p>
+                                <p class="text-sm font-bold text-primary">Microsoft 365 & Google Certified</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Logo Cloud -->
+    <div class="border-y border-gray-100 bg-gray-50/50 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-sm font-semibold text-gray-400 uppercase tracking-widest mb-6">Trusted by teams at</p>
+            <div class="flex flex-wrap justify-center gap-12 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+                 <!-- Placeholders for client logos -->
+                 <div class="flex items-center gap-2 font-bold text-xl text-primary"><i data-lucide="box" class="w-6 h-6"></i> ACME Corp</div>
+                 <div class="flex items-center gap-2 font-bold text-xl text-primary"><i data-lucide="layers" class="w-6 h-6"></i> Stark Ind</div>
+                 <div class="flex items-center gap-2 font-bold text-xl text-primary"><i data-lucide="zap" class="w-6 h-6"></i> Bolt Inc</div>
+                 <div class="flex items-center gap-2 font-bold text-xl text-primary"><i data-lucide="globe" class="w-6 h-6"></i> GlobalTech</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- My Expertise -->
+    <section id="expertise" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-base text-accent font-bold tracking-wide uppercase">My Skillset</h2>
+                <p class="mt-2 text-4xl font-bold tracking-tight text-primary">
+                    Zero Downtime, Maximum Security
+                </p>
+                <p class="mt-4 text-lg text-gray-500">
+                    I handle the complexities of email and file migrations so your team can keep working without interruption.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Skill 1 -->
+                <div class="group p-8 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-accent mb-6 group-hover:bg-accent group-hover:text-white transition">
+                        <i data-lucide="arrow-left-right" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Workspace Migrations</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">Expert handling of tenant-to-tenant or on-prem to cloud migrations. Whether it's Microsoft 365 or Google Workspace, I ensure your emails, calendars, and contacts move safely.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i> Zero Data Loss</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i> Cutover & Hybrid Staging</li>
+                    </ul>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="group p-8 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <div class="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-center text-indigo-600 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Security & Compliance</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">Migration is the perfect time to harden your security. I configure Entra ID (Azure AD), Intune MDM, and DLP policies to keep your data compliant and secure.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i> Identity Management</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i> SOC2 / HIPAA Compliance</li>
+                    </ul>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="group p-8 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <div class="w-12 h-12 bg-rose-50 rounded-lg flex items-center justify-center text-rose-600 mb-6 group-hover:bg-rose-600 group-hover:text-white transition">
+                        <i data-lucide="folder-cog" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">File Server Transformation</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">Retire those dusty file servers. I structure and migrate terabytes of data to SharePoint Online or Google Drive, ensuring permissions remain intact.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i> SharePoint Architecture</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i> Teams Governance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-primary text-white relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-20 items-center">
+                <div class="mb-10 lg:mb-0">
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-6">Why I'm Different</h2>
+                    <div class="space-y-6 text-gray-300 text-lg">
+                        <p>
+                            Many IT providers treat migration as a simple "copy-paste" job. I treat it as a business transformation.
+                        </p>
+                        <p>
+                            With deep expertise in both <strong>Microsoft 365</strong> and <strong>Google Workspace</strong>, I don't just move your data—I optimize your environment for collaboration and security from Day 1.
+                        </p>
+                        <p>
+                            I understand the nuances of DNS, mail flow, and legacy authentication, ensuring your email never goes down and your files are always accessible.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                     <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10">
+                        <h3 class="text-xl font-bold mb-6">My Tech Stack</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-white/10 rounded-full text-sm">Microsoft 365</span>
+                            <span class="px-4 py-2 bg-white/10 rounded-full text-sm">Google Workspace</span>
+                            <span class="px-4 py-2 bg-white/10 rounded-full text-sm">Exchange Online</span>
+                            <span class="px-4 py-2 bg-white/10 rounded-full text-sm">SharePoint</span>
+                            <span class="px-4 py-2 bg-white/10 rounded-full text-sm">Teams</span>
+                            <span class="px-4 py-2 bg-white/10 rounded-full text-sm">Intune / MDM</span>
+                            <span class="px-4 py-2 bg-white/10 rounded-full text-sm">Entra ID</span>
+                            <span class="px-4 py-2 bg-white/10 rounded-full text-sm">BitTitan</span>
+                            <span class="px-4 py-2 bg-white/10 rounded-full text-sm">PowerShell</span>
+                            <span class="px-4 py-2 bg-white/10 rounded-full text-sm">Compliance Manager</span>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Testimonials -->
+    <section id="testimonials" class="py-24 bg-cream">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-primary mb-12">Words from Clients</h2>
+            <div class="relative bg-white p-10 rounded-2xl shadow-xl">
+                <i data-lucide="quote" class="w-12 h-12 text-accent/20 absolute top-8 left-8"></i>
+                <p class="text-xl text-gray-700 italic relative z-10 mb-8 pt-4">
+                    "We were terrified of moving 10 years of email history to Microsoft 365. Stoyan managed the entire migration over a weekend. No lost emails, no downtime, and he even secured our devices with Intune."
+                </p>
+                <div class="flex items-center justify-center gap-4">
+                    <img src="https://randomuser.me/api/portraits/men/86.jpg" alt="Client" class="w-12 h-12 rounded-full object-cover">
+                    <div class="text-left">
+                        <p class="font-bold text-primary">David Chen</p>
+                        <p class="text-sm text-gray-500">Founder, Streamline.io</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-white relative">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-primary">Let's Work Together</h2>
+                <p class="mt-4 text-gray-600 text-lg">Have a project in mind? I’m currently accepting new clients for Q4.</p>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-gray-100 shadow-2xl p-8 md:p-12">
+                <form onsubmit="event.preventDefault(); document.getElementById('success-msg').classList.remove('hidden');" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Name</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:ring-2 focus:ring-accent focus:border-accent outline-none transition" placeholder="Your Name" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:ring-2 focus:ring-accent focus:border-accent outline-none transition" placeholder="email@example.com" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">What do you need help with?</label>
+                        <select class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:ring-2 focus:ring-accent focus:border-accent outline-none transition">
+                            <option>Microsoft 365 Migration</option>
+                            <option>Google Workspace Migration</option>
+                            <option>Security & Compliance Audit</option>
+                            <option>File Server / SharePoint Migration</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Project Details</label>
+                        <textarea rows="4" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:ring-2 focus:ring-accent focus:border-accent outline-none transition" placeholder="Tell me a bit about your timeline and goals..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 bg-primary text-white font-bold rounded-lg hover:bg-slate-800 transition shadow-lg transform hover:-translate-y-1">
+                        Send Inquiry
+                    </button>
+                    <div id="success-msg" class="hidden p-4 bg-green-50 text-green-700 rounded-lg text-center font-medium border border-green-200">
+                        Message sent! I'll get back to you within 24 hours.
+                    </div>
+                </form>
+            </div>
+            
+            <div class="mt-12 text-center text-gray-500 text-sm">
+                <p>Prefer email? Reach me at <a href="mailto:stoyan@example.com" class="text-accent hover:underline">stoyan@example.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="font-bold text-primary text-lg">Stoyan Angelov.</p>
+            <p class="text-gray-500 text-sm">&copy; 2024 Stoyan Angelov Consulting. All rights reserved.</p>
+            <div class="flex gap-6">
+                 <a href="#" class="text-gray-400 hover:text-accent transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                 <a href="#" class="text-gray-400 hover:text-accent transition"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-sm');
+                navbar.classList.add('bg-white/95');
+                navbar.classList.remove('bg-white/0');
+            } else {
+                navbar.classList.remove('shadow-sm');
+                navbar.classList.remove('bg-white/95');
+                navbar.classList.add('bg-white/0');
+            }
+        });
+
+        // Mobile Menu
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
