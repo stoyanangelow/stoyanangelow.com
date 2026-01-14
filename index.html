@@ -111,10 +111,12 @@
                     </div>
 
                     <div class="flex items-center gap-8 text-gray-400">
-                        <a href="https://www.linkedin.com/in/stoyanangelow/" class="hover:text-primary transition"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                        <a href="#" class="hover:text-primary transition"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                        <a href="#" class="hover:text-primary transition"><i data-lucide="github" class="w-6 h-6"></i></a>
+                        <a href="#" class="hover:text-primary transition"><i data-lucide="twitter" class="w-6 h-6"></i></a>
                         <div class="h-8 w-px bg-gray-200"></div>
                         <div class="flex items-center gap-2">
-                            <span class="font-bold text-primary text-xl">10+</span>
+                            <span class="font-bold text-primary text-xl">15+</span>
                             <span class="text-xs uppercase font-semibold">Years<br>Exp.</span>
                         </div>
                     </div>
@@ -138,7 +140,7 @@
                             </div>
                             <div>
                                 <p class="text-xs text-gray-500 font-semibold uppercase">Certified Expert</p>
-                                <p class="text-sm font-bold text-primary">Microsoft 365 Certified</p>
+                                <p class="text-sm font-bold text-primary">Microsoft 365 & Google Certified</p>
                             </div>
                         </div>
                     </div>
@@ -148,7 +150,8 @@
         </div>
     </section>
 
-    <!-- Logo Cloud 
+    <!-- Logo Cloud (Commented Out) -->
+    <!--
     <div class="border-y border-gray-100 bg-gray-50/50 py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <p class="text-center text-sm font-semibold text-gray-400 uppercase tracking-widest mb-6">Trusted by teams at</p>
@@ -160,8 +163,8 @@
                  <div class="flex items-center gap-2 font-bold text-xl text-primary"><i data-lucide="globe" class="w-6 h-6"></i> GlobalTech</div>
             </div>
         </div>
-    </div>-->
-    
+    </div>
+    -->
 
     <!-- My Expertise -->
     <section id="expertise" class="py-24">
@@ -233,7 +236,7 @@
                             Many IT providers treat migration as a simple "copy-paste" job. I treat it as a business transformation.
                         </p>
                         <p>
-                            With deep expertise in both <strong>Microsoft 365</strong> and <strong>Google Workspace</strong>, I don't just move your data - I optimize your environment for collaboration and security from Day 1.
+                            With deep expertise in both <strong>Microsoft 365</strong> and <strong>Google Workspace</strong>, I don't just move your data—I optimize your environment for collaboration and security from Day 1.
                         </p>
                         <p>
                             I understand the nuances of DNS, mail flow, and legacy authentication, ensuring your email never goes down and your files are always accessible.
@@ -261,30 +264,51 @@
         </div>
     </section>
 
+    <!-- Simple Testimonials -->
+    <section id="testimonials" class="py-24 bg-cream">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-primary mb-12">Words from Clients</h2>
+            <div class="relative bg-white p-10 rounded-2xl shadow-xl">
+                <i data-lucide="quote" class="w-12 h-12 text-accent/20 absolute top-8 left-8"></i>
+                <p class="text-xl text-gray-700 italic relative z-10 mb-8 pt-4">
+                    "We were terrified of moving 10 years of email history to Microsoft 365. Stoyan managed the entire migration over a weekend. No lost emails, no downtime, and he even secured our devices with Intune."
+                </p>
+                <div class="flex items-center justify-center gap-4">
+                    <img src="https://randomuser.me/api/portraits/men/86.jpg" alt="Client" class="w-12 h-12 rounded-full object-cover">
+                    <div class="text-left">
+                        <p class="font-bold text-primary">David Chen</p>
+                        <p class="text-sm text-gray-500">Founder, Streamline.io</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-24 bg-white relative">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold text-primary">Let's Work Together</h2>
-                <p class="mt-4 text-gray-600 text-lg">Have a project in mind? Reach out!</p>
+                <p class="mt-4 text-gray-600 text-lg">Have a project in mind?</p>
             </div>
 
+            <!-- Contact Form (Commented Out) -->
+            <!--
             <div class="bg-white rounded-2xl border border-gray-100 shadow-2xl p-8 md:p-12">
-                <form onsubmit="event.preventDefault(); document.getElementById('success-msg').classList.remove('hidden');" class="space-y-6">
+                <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2">Name</label>
-                            <input type="text" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:ring-2 focus:ring-accent focus:border-accent outline-none transition" placeholder="Your Name" required>
+                            <input type="text" name="name" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:ring-2 focus:ring-accent focus:border-accent outline-none transition" placeholder="Your Name" required>
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2">Email</label>
-                            <input type="email" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:ring-2 focus:ring-accent focus:border-accent outline-none transition" placeholder="email@example.com" required>
+                            <input type="email" name="email" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:ring-2 focus:ring-accent focus:border-accent outline-none transition" placeholder="email@example.com" required>
                         </div>
                     </div>
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-2">What do you need help with?</label>
-                        <select class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:ring-2 focus:ring-accent focus:border-accent outline-none transition">
+                        <select name="service" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:ring-2 focus:ring-accent focus:border-accent outline-none transition">
                             <option>Microsoft 365 Migration</option>
                             <option>Google Workspace Migration</option>
                             <option>Security & Compliance Audit</option>
@@ -294,19 +318,17 @@
                     </div>
                     <div>
                         <label class="block text-sm font-semibold text-gray-700 mb-2">Project Details</label>
-                        <textarea rows="4" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:ring-2 focus:ring-accent focus:border-accent outline-none transition" placeholder="Tell me a bit about your timeline and goals..."></textarea>
+                        <textarea name="message" rows="4" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white focus:ring-2 focus:ring-accent focus:border-accent outline-none transition" placeholder="Tell me a bit about your timeline and goals..."></textarea>
                     </div>
                     <button type="submit" class="w-full py-4 bg-primary text-white font-bold rounded-lg hover:bg-slate-800 transition shadow-lg transform hover:-translate-y-1">
                         Send Inquiry
                     </button>
-                    <div id="success-msg" class="hidden p-4 bg-green-50 text-green-700 rounded-lg text-center font-medium border border-green-200">
-                        Message sent! I'll get back to you within 24 hours.
-                    </div>
                 </form>
             </div>
+            -->
             
             <div class="mt-12 text-center text-gray-500 text-sm">
-                <p>Prefer email? Reach me at <a href="mailto:stoyan@stoyanangelow.com" class="text-accent hover:underline">stoyan@stoyanangelow.com</a></p>
+                <p>Reach me at <a href="mailto:stoyan@example.com" class="text-accent hover:underline">stoyan@example.com</a></p>
             </div>
         </div>
     </section>
